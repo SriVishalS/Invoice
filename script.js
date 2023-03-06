@@ -28,7 +28,6 @@ function Calc(v) {
 
   GetTotal();
 }
-
 function GetTotal() {
   /*Footer Calculation*/
 
@@ -43,6 +42,6 @@ function GetTotal() {
   document.getElementById("FTotal").value = sum;
 
   var gst = document.getElementById("FGST").value;
-  var net = sum+sum*gst/100;
+  var net = sum + (sum * gst) / 100;
   document.getElementById("FNet").value = net;
 }
