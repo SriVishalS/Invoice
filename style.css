@@ -2,6 +2,9 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+td {
+  word-break: break-all;
+}
 .headerImg,
 .printVisible {
   display: none !important;
@@ -14,23 +17,39 @@
   width: auto !important;
 }
 @media print {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .input-group-text {
+    padding: 0 !important;
+  }
+  table {
+    width: 580px !important;
+    margin-left: 35px !important;
+  }
   .one {
     display: flex !important;
     flex-direction: column !important;
   }
   .inp-cont {
     flex-direction: row !important;
-
   }
-   .inp-cont>div{
+  .inp-cont > div {
     width: 50% !important;
-    
-   }
+  }
   .one > input {
-    width: 100% !important;
+    width: 355px !important;
     font-weight: 900 !important;
     margin-top: -35px !important;
     letter-spacing: 1px;
+    background-color: transparent !important;
+    width: auto;
+    font-size: 25px;
+  }
+  .one > span {
+    margin-left: 10px !important;
+    margin-top: -30px !important;
   }
   .two {
     margin-top: -35px !important;
@@ -39,15 +58,26 @@
   .two > textarea {
     background: transparent !important;
     border: none !important;
-    padding: 9px !important;
-    height: 150px;
+    height: 130px;
+    resize: none;
+    margin-left: 26px !important;
+    height: 90px !important;
+    font-size: 20px;
+    margin-top: -10px !important;
+  }
+  .two > div {
+    margin-left: -10px !important;
   }
   .two > textarea::-webkit-scrollbar {
     display: none;
   }
   .three > input {
-    margin-top: -50px !important;
-    margin-left: 70px !important;
+    margin-top: -30px !important;
+    margin-left: 130px !important;
+    background: transparent !important;
+  }
+  .four > span {
+    margin-left: 35px !important;
   }
   .btn,
   .NoPrint {
@@ -67,7 +97,13 @@
     border: none;
     outline: none;
   }
-
+  .img-left {
+    width: 230px !important;
+  }
+  .img-ryt {
+    width: 300px !important;
+    margin-top: -20px !important;
+  }
   table {
     border: 1px solid black;
   }
