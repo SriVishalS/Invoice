@@ -1,32 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
-td {
-  word-break: break-all;
+.form-control:disabled {
+  background-color: white !important;
 }
 .headerImg,
 .printVisible {
   display: none !important;
 }
-
+#TRow textarea {
+  border: none !important;
+  outline: none !important;
+  resize: none !important;
+}
 .two > textarea {
   padding: 10px !important;
 }
-.input-group {
-  width: auto !important;
+table,
+.form-control {
+  font-size: 10px;
+}
+.inp-cont {
+  font-size: 10px !important;
+}
+@media screen and (min-width: 700px) {
+  table,
+  .form-control {
+    font-size: 16px !important;
+  }
 }
 @media print {
   * {
     margin: 0;
     padding: 0;
   }
+  table {
+    width: 680px !important;
+    margin-left: 35px !important;
+    font-size: 16px !important;
+    border: 1px solid black;
+  }
+  .img-left {
+    width: 230px !important;
+  }
+  .img-ryt {
+    width: 250px !important;
+    margin-top: -50px !important;
+  }
   .input-group-text {
     padding: 0 !important;
+    border: 0px;
+    background-color: white;
   }
-  table {
-    width: 580px !important;
-    margin-left: 35px !important;
+  #TRow textarea {
+    border: none !important;
+    outline: none !important;
+    resize: none !important;
   }
   .one {
     display: flex !important;
@@ -34,6 +65,8 @@ td {
   }
   .inp-cont {
     flex-direction: row !important;
+    justify-content: space-between;
+    width: 100% !important;
   }
   .inp-cont > div {
     width: 50% !important;
@@ -41,15 +74,16 @@ td {
   .one > input {
     width: 355px !important;
     font-weight: 900 !important;
-    margin-top: -35px !important;
+    margin-top: -17px !important;
     letter-spacing: 1px;
     background-color: transparent !important;
     width: auto;
     font-size: 25px;
+    margin-left: 32px !important;
   }
   .one > span {
-    margin-left: 10px !important;
-    margin-top: -30px !important;
+    margin-left: 43px !important;
+    margin-top: -5px !important;
   }
   .two {
     margin-top: -35px !important;
@@ -58,26 +92,27 @@ td {
   .two > textarea {
     background: transparent !important;
     border: none !important;
-    height: 130px;
     resize: none;
-    margin-left: 26px !important;
+    margin-left: 35px !important;
     height: 90px !important;
-    font-size: 20px;
-    margin-top: -10px !important;
+    font-size: 16px !important;
+    margin-top: 5px !important;
   }
   .two > div {
     margin-left: -10px !important;
   }
-  .two > textarea::-webkit-scrollbar {
+  .two > textarea::-webkit-scrollbar,
+  textarea::-webkit-scrollbar {
     display: none;
+    padding: 0 !important;
   }
   .three > input {
-    margin-top: -30px !important;
+    margin-top: -10px !important;
     margin-left: 130px !important;
     background: transparent !important;
   }
   .four > span {
-    margin-left: 35px !important;
+    margin-left: 45px !important;
   }
   .btn,
   .NoPrint {
@@ -88,23 +123,6 @@ td {
   }
   .form-control {
     border: 0px;
-  }
-  .input-group-text {
-    border: 0px;
-    background-color: white;
-  }
-  .no-border {
-    border: none;
-    outline: none;
-  }
-  .img-left {
-    width: 230px !important;
-  }
-  .img-ryt {
-    width: 300px !important;
-    margin-top: -20px !important;
-  }
-  table {
-    border: 1px solid black;
+    font-size: 18px !important;
   }
 }

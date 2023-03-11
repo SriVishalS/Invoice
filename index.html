@@ -12,12 +12,12 @@
 </head>
 
 <body>
-      <div class="container-fluid">
+      <div class="">
             <div class="w-100  justify-content-between headerImg" style="height: 190px;">
                   <img src="./logo-left.png" alt="" class="img-fluid img-left">
-                  <img src="./logo-right-2.png" alt="" class="img-fluid img-ryt">
+                  <img src="./logo-right-3.png" alt="" class="img-fluid img-ryt">
             </div>
-            <div class="container-fluid col-12 no-border">
+            <div class="col-12 no-border">
                   <div>
                         <img src="" alt="" class="img-fluid">
                         <img src="" alt="" class="img-fluid">
@@ -25,19 +25,19 @@
                   <div class="card-header text-center NoPrint">
                         <h4 class="NoPrint">INVOICE</h4>
                   </div>
-                  <div class="container-fluid no-border justify-content-center align-items-center">
+                  <div class="container-fluid no-border">
                         <div class="row flex justify-content-between flex-column inp-cont">
                               <div class="col-12">
-                                    <div class="input-group one m-4 col-6">
-                                          <span class="input-group-text " style="font-size: 22px;">To :</span><br>
+                                    <div class="input-group one  mb-3 col-6">
+                                          <span class="input-group-text">To :</span><br>
                                           <input type="text" class="form-control">
                                     </div>
 
-                                    <div class="form-floating  d-flex two ">
+                                    <div class="form-floating  mb-3  d-flex two ">
                                           <span class="input-group-text fw-bolder NoPrint">Address</span><br>
-                                          <textarea class="form-control" id="floatingTextarea"></textarea>
+                                          <textarea class="form-control" id="floatingTextarea" rows="10" cols="10"></textarea>
                                     </div>
-                                    <div class="input-group four">
+                                    <div class="input-group four mb-3 ">
                                           <span class="input-group-text fw-bolder">Invoice No: </span><br>
                                           <input type="text" class="form-control">
                                     </div>
@@ -53,14 +53,15 @@
                         <table class="table table-sm col-sm-6">
                               <thead class="table-success">
                                     <tr>
-                                          <th scope="col" class="text-center p-2 border border-1 border-dark">S.No.</th>
-                                          <th scope="col" class="text-center p-2 border border-1 border-dark">
+                                          <th scope="col" class="text-center border border-1 border-dark">S.No.</th>
+                                          <th scope="col" class="text-center border border-1 border-dark">
                                                 Particulars</th>
-                                          <th scope="col" class="text-center p-2 border border-1 border-dark">Qty</th>
-                                          <th scope="col" class="text-center p-2 border border-1 border-dark">Rate</th>
-                                          <th scope="col" class="text-center p-2 border border-1 border-dark">Amount in
+                                          <th scope="col" class="text-center border border-1 border-dark">Qty</th>
+                                          <th scope="col" class="text-center border border-1 border-dark">Rate</th>
+                                          <th scope="col" class="text-center border border-1 border-dark">Amount in
                                                 Rs.</th>
-                                          <th scope="col" class="NoPrint text-center bg-light">
+                                          <th scope="col"
+                                                class="NoPrint border border-1 border-dark text-center bg-light">
                                                 <button type="button" class="btn btn-sm btn-success"
                                                       onclick="BtnAdd()">+</button>
 
@@ -69,35 +70,35 @@
                                     </tr>
                               </thead>
                               <tbody id="TBody">
-                                    <tr id="TRow" class="d-none">
-                                          <td class="border border-1 border-dark"><input type="number"
-                                                      class="form-control text-center"></td>
-                                          <td class="border border-1 border-dark"><input type="text"
-                                                      class="form-control text-center"></td>
-                                          <td class="border border-1 border-dark"><input type="number"
-                                                      class="form-control text-center" name="qty"
+                                    <tr id="TRow" class="d-none col-12">
+                                          <td class="border border-1 border-dark col-2"><input type="number"
+                                                      class="form-control text-center mt-3"></td>
+                                          <td class="border border-1 border-dark col-4"><textarea name="" id="" rows="5"
+                                                      cols="10" class="col-12 p-3" border-none"></textarea></td>
+                                          <td class="border border-1 border-dark col-2"><input type="number"
+                                                      class="form-control text-center mt-3" name="qty"
                                                       onchange="Calc(this);"></td>
-                                          <td class="border border-1 border-dark"><input type="number"
-                                                      class="form-control text-center" name="rate"
+                                          <td class="border border-1 border-dark col-2"><input type="number"
+                                                      class="form-control text-center mt-3" name="rate"
                                                       onchange="Calc(this);"></td>
-                                          <td class="border border-1 border-dark"><input type="number"
-                                                      class="form-control text-center" name="amt" value="0" disabled="">
+                                          <td class="border border-1 border-dark col-2"><input type="number"
+                                                      class="form-control text-center mt-3" name="amt" value="0"
+                                                      disabled="">
                                           </td>
-                                          <td class="NoPrint border border-1 border-dark"><button type="button"
-                                                      class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button>
+                                          <td class="NoPrint border border-1 border-dark col-2"><button type="button"
+                                                      class="btn btn-sm btn-danger mt-3"
+                                                      onclick="BtnDel(this)">X</button>
                                           </td>
                                     </tr>
                               </tbody>
                         </table>
-
-
                         <div class="row">
                               <div class="col-6">
 
                                     <button type="button" class="btn btn-primary" onclick="GetPrint()">Print</button>
 
                               </div>
-                              <div class="col-6">
+                              <div class="col-5">
                                     <div class="input-group ">
                                           <span class="input-group-text">Total</span>
                                           <input type="number" class="form-control text-end" id="FTotal" name="FTotal"
@@ -109,7 +110,7 @@
                                                 onchange="GetTotal()">
                                     </div>
                                     <div class="input-group">
-                                          <span class="input-group-text">Net Amt</span>
+                                          <span class="input-group-text">Net Amt (In Rs.)</span>
                                           <input type="number" class="form-control text-end" id="FNet" name="FNet"
                                                 disabled="">
                                     </div>
@@ -139,9 +140,6 @@
             </div>
 
       </div>
-
-
-
       <!-- Bootstrap Bundle JS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
